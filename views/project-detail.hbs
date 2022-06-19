@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HOME</title>
+    <title>{{project.name}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/icon.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/icon.png" type="image/png">
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <img src="assets/img/logo.png" class="img-fluid" alt="Image cannot be loaded">
+            <img src="../assets/img/logo.png" class="img-fluid" alt="Image cannot be loaded">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,14 +24,14 @@
                 <ul class="navbar-nav ms-3 d-xxl-flex navbar-flex flex-grow-1">
                     <div class="d-flex navbar-flex flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index">Home</a>
+                            <a class="nav-link active" aria-current="page" href="../">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="add-project">Add Project</a>
+                            <a class="nav-link" href="../add-project">Add Project</a>
                         </li>
                     </div>
                     <div class="d-flex me-3 flex-grow-1 nav-contact-container">
-                        <a href="contact" class="btn btn-dark rounded">Contact Me</a>
+                        <a href="../contact" class="btn btn-dark rounded">Contact Me</a>
                     </div>
                 </ul>
             </div>
@@ -39,20 +39,20 @@
     </nav>
 
     <div class="m-5">
-        <h1 class="text-center">Dumbways Web App</h1>
+        <h1 class="text-center">{{project.name}}</h1>
         <div class="project-detail mt-5">
             <div class="project-detail-image-container">
-                <img src="assets/img/projek2.jpg" class="card-img-top project-detail-image"
+                <img src="{{project.image}}" class="card-img-top project-detail-image"
                     alt="Image cannnot be loaded">
             </div>
             <div class="project-detail-description ms-5">
                 <div>
                     <h3>Duration</h3>
                     <p>
-                        <i class="fa-solid fa-calendar-days"></i> 12 Jan 2021 - 11 Feb 2021
+                        <i class="fa-solid fa-calendar-days"></i> {{project.startdate}} - {{project.enddate}}
                     </p>
                     <p>
-                        <i class="fa-regular fa-clock"></i> 1 month
+                        <i class="fa-regular fa-clock"></i> {{project.duration}}
                     </p>
                 </div>
                 <div>
@@ -81,24 +81,7 @@
         
         <div class="text-align-justify container mt-5">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint
-                commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-                fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
-                officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid.
-                Reprehenderit, quia.
-                <br><br>
-                Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi at sunt excepturi
-                expedita sint? Sed quibusdam recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
-                minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit quibusdam sed amet tempora. Sit
-                laborum ab, eius fugit doloribus tenetur fugiat, temporibus enim commodi iusto libero magni deleniti
-                quod quam consequuntur! Commodi minima excepturi repudiandae velit hic maxime doloremque.
-                <br><br>
-                Quaerat provident commodi consectetur veniam similique ad earum omnis ipsum saepe, voluptas, hic
-                voluptates pariatur est explicabo fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores
-                labore suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium modi minima sunt
-                esse temporibus sint culpa, recusandae aliquam numquam totam ratione voluptas quod exercitationem fuga.
-                Possimus quis earum veniam quasi aliquam eligendi, placeat qui corporis!
+                {{project.description}}
             </p>
         </div>
 
