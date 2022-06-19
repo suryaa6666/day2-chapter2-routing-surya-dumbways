@@ -7,21 +7,21 @@ app.set('view engine', 'hbs'); // view engine is set to handlebars
 
 app.use('/assets', express.static(__dirname + '/assets')); // static files are served from the assets folder
 
+let isLogin = false;
+
 app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Home',
-    });
+    res.render('index', { isLogin });
 });
 
 app.get('/contact', (req, res) => {
-    res.render('contact');
+    res.render('contact', { isLogin });
 });
 
 app.get('/project-detail/:id', (req, res) => {
     let id = req.params.id;
 
     res.render('project-detail', {
-        project: {
+        projectDetail: {
             id,
             name: 'Project membuat aplikasi rental PS',
             description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
@@ -52,7 +52,7 @@ app.get('/project-detail/:id', (req, res) => {
 });
 
 app.get('/add-project', (req, res) => {
-    res.render('add-project');
+    res.render('add-project', { isLogin });
 });
 
 app.listen(port, () => {
