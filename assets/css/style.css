@@ -38,7 +38,7 @@ label {
     font-size: 20px !important;
 }
 
-.text-align {
+.text-align-justify {
     text-align: justify;
 }
 
@@ -54,10 +54,11 @@ label {
     margin: 50px;
 }
 
-.project-image {
+.project-detail-image {
     object-fit: cover;
-    height: 200px;
-    max-height: 200px;
+    height: 300px;
+    width: 500px;
+    max-height: 300px;
 }
 
 .project-action {
@@ -65,6 +66,17 @@ label {
     position: absolute;
     right: 0;
     left: 0;
+}
+
+.project-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #107C7C !important;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -76,6 +88,23 @@ label {
 @media only screen and (max-width: 992px) {
     .navbar-flex {
         flex-direction: column;
+    }
+
+    .project-detail-description {
+        margin-top: 50px;
+    }
+
+    .project-detail-image-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-detail {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .nav-contact-container {
@@ -115,5 +144,10 @@ label {
 
     .me-5 {
         margin-right: 0 !important;
+    }
+
+    .project-detail-image {
+        height: 200px;
+        width: 100%;
     }
 }
