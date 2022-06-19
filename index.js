@@ -6,6 +6,7 @@ const port = 8000;
 app.set('view engine', 'hbs'); // view engine is set to handlebars
 
 app.use('/assets', express.static(__dirname + '/assets')); // static files are served from the assets folder
+app.use(express.urlencoded({ extended: false }));
 
 let isLogin = true;
 
@@ -52,7 +53,11 @@ app.get('/project-detail/:id', (req, res) => {
 });
 
 app.get('/add-project', (req, res) => {
-    res.render('add-project', { isLogin });
+    res.render('add-project');
+});
+
+app.post('/add-project', (req, res) => {
+    console.log(req.body);
 });
 
 app.listen(port, () => {
