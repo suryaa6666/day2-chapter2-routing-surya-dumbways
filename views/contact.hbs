@@ -80,10 +80,10 @@
             </select>
           </div>
           <div class="mb-3">
-            <label for="description" class="form-label fw-bold">Your Message</label>
+            <label for="message" class="form-label fw-bold">Your Message</label>
             <textarea
               class="form-control shadow"
-              id="description"
+              id="message"
               rows="5"
             ></textarea>
           </div>
@@ -91,6 +91,7 @@
             <button
               type="submit"
               class="btn btn-dark rounded-pill ps-4 pe-4"
+              onclick="submitData(event);"
             >Submit</button>
           </div>
         </form>
@@ -103,6 +104,7 @@
       crossorigin="anonymous"
     >
     </script>
+    <script src="../assets/js/contact.js"></script>
   </body>
 
 </html>

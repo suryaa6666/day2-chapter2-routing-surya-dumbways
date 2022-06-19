@@ -7,7 +7,7 @@ app.set('view engine', 'hbs'); // view engine is set to handlebars
 
 app.use('/assets', express.static(__dirname + '/assets')); // static files are served from the assets folder
 
-let isLogin = false;
+let isLogin = true;
 
 app.get('/', (req, res) => {
     res.render('index', { isLogin });
